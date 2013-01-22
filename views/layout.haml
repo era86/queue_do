@@ -1,0 +1,15 @@
+%html
+  %head
+    - @stylesheets.each do |css|
+      = "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/#{css}\" />"
+    - @javascripts.each do |js|
+      = "<script src=\"js/#{js}\"></script>"
+  %body
+    .header.section
+      %span.title-cont
+        Queue Do
+      %span.time-cont
+        1/1/1111 00:00:00
+    .content.section
+      = yield
+    .footer.section

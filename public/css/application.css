@@ -1,0 +1,27 @@
+.section {
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  width: 100%;
+}
+
+.title-cont {
+}
+
+.time-cont {
+  float: right;
+}
+
+.content {
+  height: 550px;
+  width: 100%;
+  border-bottom: 1px solid #CCC;
+  border-top: 1px solid #CCC;
+}
+
+.footer {
+  width: 100%;
+}
+
