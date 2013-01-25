@@ -1,2 +1,13 @@
 .queue-cont
   %ul.queue{value: locals[:type]}
+    :plain
+       <script type="temple" data="QueueDo.items">
+         <li class="item-cont item">
+           {{id}}
+           -
+           {{name}}
+           -
+           {{description}}
+         </li>
+       </script>
+      
