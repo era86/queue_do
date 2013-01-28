@@ -83,6 +83,12 @@ var ItemData = function() {
 
     getItems: function() {
       return Data.loadData(table).slice();
+    },
+
+    getItemsWithQueueId: function(queueId) {
+      return $.map(Data.loadData(table).slice(), function(e) {
+        if (queueId == e.queue_id) { return e; }
+      });
     }
   }
 

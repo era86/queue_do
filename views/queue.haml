@@ -1,13 +1,12 @@
-.queue-cont
-  %ul.queue{value: locals[:type]}
-    :plain
-       <script type="temple" data="QueueDo.items">
-         <li class="item-cont item">
-           {{id}}
-           -
-           {{name}}
-           -
-           {{description}}
-         </li>
-       </script>
-      
+.queue-holder
+  .queue-cont
+    %ul.queue{value: locals[:type]}
+      = render 'views/item.js.haml', locals
+
+  .add-cont
+    %a{onclick: "createItem('#{locals[:type]}');"}
+      [+]
+
+#add-item-form{style: "display: none;"}
+  %h3
+    wtf

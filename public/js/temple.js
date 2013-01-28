@@ -20,13 +20,11 @@
 
       var html = $this.html();
       $.each(currScope, function(i, v) {
-        console.log(JSON.stringify(v));
         var transHtml = html;
 
         for (k in v) {
           var regex = new RegExp("{{"+k+"}}", "ig");
           transHtml = transHtml.replace(regex, v[k]);
-          console.log(transHtml);
         }
 
         $this.parent().append(transHtml);
