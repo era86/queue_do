@@ -1,12 +1,14 @@
 .queue-holder
+  %p= titleize(locals[:type])
   .queue-cont
     %ul.queue{value: locals[:type]}
-      = render 'views/item.js.haml', locals
+      = haml :item_js, locals: locals
 
-  .add-cont
-    %a{onclick: "createItem('#{locals[:type]}');"}
-      [+]
+  - if locals[:type] == "to_do"
+    .add-cont
+      %button.create-item-button{value: locals[:type]}
+        + 
+  - else
+    %div{style: "display: inline-block; height: 19px;"}
 
-#add-item-form{style: "display: none;"}
-  %h3
-    wtf
+= haml :add_item_form, locals: locals

@@ -1,5 +1,5 @@
 .queue-holder {
-  margin: 5px;
+  margin: 5px 50px 5px 50px;
   display: inline-block;
   padding: 5px;
 }
@@ -20,4 +20,5 @@
 
 .add-cont {
   text-align: center;
+  height: 50px;
 }

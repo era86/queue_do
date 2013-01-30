@@ -4,6 +4,7 @@
 
     return this.each(function() {
       var $this = $(this);
+      $this.parent().children("[class!=temple]").remove();
 
       var dataStr = $this.attr("data");
 
@@ -34,3 +35,9 @@
   };
 
 })( jQuery );
+
+$(function(){
+  $(".temple").temple();
+});
+
+

@@ -1,0 +1,11 @@
+.add-item-form {
+  height: 300px;
+  width: 300px;
+  border: solid 1px #CCC;
+  background-color: #DDD;
+  padding: 10px;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  display: none;
+}
