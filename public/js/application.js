@@ -24,3 +24,10 @@ $(function(){
   $(".queue, .item").disableSelection();
 });
 
+$(function(){
+  setInterval(function() {
+    var now = new Date();
+    var time = now.toDateString().substring(4,100) + " " + now.toTimeString().substring(0,8);
+    $(".time-cont").html(time);
+  }, 500);
+});
