@@ -13,7 +13,8 @@ var ItemData = function() {
     "name",
     "description",
     "created_at",
-    "deadline"
+    "deadline",
+    "itemId" // ignored
   ];
 
   function isValidAttributes(attrs) {
@@ -79,6 +80,24 @@ var ItemData = function() {
       });
 
       Data.storeData(table, data);
+    },
+
+    getItem: function(itemId) {
+      var data = Data.loadData(table);
+
+      var index = null;
+      $.each(data, function(i,v) {
+        if (v.id == itemId) {
+          index = i;
+          return false;
+        }
+      });
+
+      var item = null;
+      if (index != null) {
+        item = $.extend({}, data[index]);
+      }
+      return item;
     },
 
     getItems: function() {

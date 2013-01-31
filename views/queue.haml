@@ -6,9 +6,7 @@
 
   - if locals[:type] == "to_do"
     .add-cont
-      %button.create-item-button{value: locals[:type]}
+      %button.create-item-button
         + 
   - else
     %div{style: "display: inline-block; height: 19px;"}
-
-= haml :add_item_form, locals: locals

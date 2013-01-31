@@ -1,2 +1,4 @@
 - ["to_do", "in_progress", "complete"].each do |type|
   = haml :queue, locals: { type: type }
+
+= haml :add_item_form

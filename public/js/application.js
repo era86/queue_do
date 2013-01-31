@@ -24,31 +24,3 @@ $(function(){
   $(".queue, .item").disableSelection();
 });
 
-$(function(){
-  $(".create-item-button")
-  .click( function() {
-    var queueId = $(this).attr("value");
-
-    $(".add-item-form[value="+queueId+"]").dialog("open");
-  });
-
-  $(".add-item-form").dialog({
-    autoOpen: false,
-    position: { 
-      my: "center", 
-      at: "center", 
-      of: $(".content")
-    },
-    draggable: false
-  });
-});
-
-$(function(){
-  $("body").on("click", ".delete-item-button", function() {
-    var itemId = $(this).attr("value");
-    ItemData.deleteItem(itemId);
-    QueueDo.loadQueueData();
-    $(".temple").temple();
-  });
-});
-

@@ -8,13 +8,14 @@
 
 .item-cont .name-cont {
   font-weight: bold;
+  border-bottom: solid 1px #EEE;
 }
 
 .item-cont .details-cont {
   height: 70px;
 }
 
-.item-cont .delete-cont {
+.item-cont .action-cont {
   margin-top: 5px;
   text-align: right;
 }

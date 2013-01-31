@@ -1,4 +1,5 @@
-.add-item-form{value: locals[:type]}
+.add-item-form
+  %input{type: "hidden", name: "itemId"}
   .attr-cont
     %label
       Name:
@@ -13,16 +14,15 @@
     %label
       Time Limit:
     %select{name: "deadline"}
-      %option 5 Minutes
-      %option 15 Minutes
-      %option 30 Minutes
-      %option 1 Hour
-      %option 2 Hours
-      %option 4 Hours
-      %option 1 Day
-      %option 2 Days
-      %option 1 Week
-
+      %option{value: "300000"} 5 Minutes
+      %option{value: "900000"} 15 Minutes
+      %option{value: "1800000"} 30 Minutes
+      %option{value: "3600000"} 1 Hour
+      %option{value: "7200000"} 2 Hours
+      %option{value: "14400000"} 4 Hours
+      %option{value: "86400000"} 1 Day
+      %option{value: "172800000"} 2 Days
+      %option{value: "1209600000"} 1 Week
 
   .button-cont
     %button.item-cancel-button
