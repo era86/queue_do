@@ -28,3 +28,7 @@ body {
 .footer {
   width: 100%;
 }
+
+button {
+  width: 50px;
+}

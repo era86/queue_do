@@ -1,6 +1,4 @@
 .add-item-form {
-  height: 300px;
-  width: 300px;
   border: solid 1px #CCC;
   background-color: #DDD;
   padding: 10px;
@@ -9,3 +7,30 @@
 .ui-dialog .ui-dialog-titlebar {
   display: none;
 }
+
+.attr-cont {
+  margin-bottom: 10px;
+}
+
+.attr-cont label {
+  display: inline-block;
+  width: 100px;
+  vertical-align: top;
+}
+
+.attr-cont input {
+  width: 150px;
+}
+
+.attr-cont textarea {
+  resize: none;
+  width: 150px;
+  height: 100px;
+}
+
+.button-cont {
+  text-align: right;
+  margin-top: 50px;
+}
+
+

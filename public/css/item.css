@@ -1,6 +1,20 @@
 .item-cont{
   border: 1px solid #CCC;
   height: 100px;
-  width: 275px;
+  width: 265px;
   margin: 5px;
+  padding: 5px;
+}
+
+.item-cont .name-cont {
+  font-weight: bold;
+}
+
+.item-cont .details-cont {
+  height: 70px;
+}
+
+.item-cont .delete-cont {
+  margin-top: 5px;
+  text-align: right;
 }

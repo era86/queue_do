@@ -1,12 +1,18 @@
 :plain
   <script class="temple" type="text" data="QueueDo.#{locals[:type]}">
-   <li class="item-cont item" value="{{id}}">
-     {{id}}
-     -
-     {{name}}
-     -
-     {{description}}
-       <button class="delete-item-button" value="{{id}}">-</button>
-   </li>
+    <li class="item-cont item" value="{{id}}">
+      <div class="details-cont">
+        <div class="name-cont">
+          {{name}}
+        </div>
+        <div class="desc-cont">
+          {{description}}
+        </div>
+      </div>
+
+      <div class="delete-cont">
+        <button class="delete-item-button" value="{{id}}">-</button>
+      </div>
+    </li>
   </script>
 
