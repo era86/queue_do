@@ -5,6 +5,7 @@
 //    description
 //    created_at
 //    deadline
+//    limit 
 
 var ItemData = function() {
   var table = "items";
@@ -14,6 +15,7 @@ var ItemData = function() {
     "description",
     "created_at",
     "deadline",
+    "limit",
     "itemId" // ignored
   ];
 

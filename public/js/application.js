@@ -1,8 +1,19 @@
 var QueueDo = QueueDo || {};
 
+QueueDo.getDateStr = function(date) {
+  return date.toDateString().substring(4,100) + " " + date.toTimeString().substring(0,8);
+}
+
 QueueDo.loadQueueData = function() {
-  $.each(["to_do", "in_progress", "complete", "incomplete"], function(i, v) {
-    QueueDo[v] = ItemData.getItemsWithQueueId(v); 
+  $(["to_do", "in_progress", "complete", "incomplete"]).each(function(i, v) {
+    var items = ItemData.getItemsWithQueueId(v); 
+    QueueDo[v] = [];
+
+    $(items).each(function(i, e) {
+      var deadline = new Date(e.deadline);
+      e.deadlineStr = QueueDo.getDateStr(deadline);
+      QueueDo[v].push(e);
+    });
   });
 }
 QueueDo.loadQueueData();
@@ -26,8 +37,6 @@ $(function(){
 
 $(function(){
   setInterval(function() {
-    var now = new Date();
-    var time = now.toDateString().substring(4,100) + " " + now.toTimeString().substring(0,8);
-    $(".time-cont").html(time);
+    $(".time-cont").html(QueueDo.getDateStr(new Date()));
   }, 500);
 });

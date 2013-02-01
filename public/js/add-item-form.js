@@ -24,7 +24,8 @@ $(function(){
     var attrs = {
       queue_id: "to_do",
       created_at: now,
-      deadline: new Date(now.getTime() + parseInt(limit))
+      deadline: new Date(now.getTime() + parseInt(limit)),
+      limit: limit
     };
 
     $("input, textarea", $f).each( function(i, v) {
