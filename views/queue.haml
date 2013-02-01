@@ -1,5 +1,5 @@
 .queue-holder
-  %p= titleize(locals[:type])
+  %span.queue-title= titleize(locals[:type])
   .queue-cont
     %ul.queue{value: locals[:type]}
       = haml :item_js, locals: locals

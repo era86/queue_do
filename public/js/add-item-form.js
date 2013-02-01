@@ -1,6 +1,7 @@
 $(function(){
   $(".add-item-form").dialog({
     autoOpen: false,
+    modal: true,
     position: { 
       my: "center", 
       at: "center", 
@@ -38,6 +39,10 @@ $(function(){
     if (itemId === "") {
       ItemData.createItem(attrs);
     } else {
+      delete attrs.queue_id
+      delete attrs.created_at
+      delete attrs.deadline
+      delete attrs.limit
       ItemData.updateItem(itemId, attrs);
     }
 
@@ -48,9 +53,8 @@ $(function(){
 
 });
 
-
 $(function(){
-  var limit = 80;
+  var limit = 85;
   $(".add-item-form textarea").keyup(function(){
     var curVal = $(this).val();
     if (curVal.length >= limit) {

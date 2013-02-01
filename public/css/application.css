@@ -1,6 +1,8 @@
 body {
   overflow-x: hidden;
   overflow-y: auto;
+  color: #484848;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
 
 .section {
@@ -13,19 +15,32 @@ body {
 }
 
 .time-cont {
+  font-size: large;
+  margin-top: 30px;
   float: right;
+}
+
+.title-cont {
+  font-size: xx-large;
+  font-weight: bold;
 }
 
 .content {
   width: 100%;
-  border-bottom: 1px solid #CCC;
-  border-top: 1px solid #CCC;
+  border-top: solid 1px #D8D8D8;
+  border-bottom: solid 1px #D8D8D8;
+  text-align: center;
 }
 
 .footer {
   width: 100%;
+  text-align: right;
 }
 
 button {
   width: 50px;
+}
+
+.ui-widget-overlay {
+  background-color: black;
 }

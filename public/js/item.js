@@ -19,6 +19,7 @@ $(function(){
 
 $(function(){
   $("body").on("click", ".edit-item-button", function() {
+    console.log('wat');
     var $f = $(".add-item-form");
     var itemId = $(this).attr("value");
     var attrs = ItemData.getItem(itemId);

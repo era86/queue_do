@@ -14,17 +14,20 @@ QueueDo.startItemPoll = function() {
 
     var perc = (timeLeft/limit)*100;
 
-    $(e).attr("style", "background-color: #FFFFFF;");
+    $(["warm", "hot", "complete", "incomplete"]).each(function(i, v) {
+      $(e).removeClass(v);
+    });
+
     if (perc <= 50 && perc > 20) {
-      $(e).attr("style", "background-color: #FFFFCC;");
+      $(e).addClass("warm");
     } else if (perc <= 20 && perc > 1) {
-      $(e).attr("style", "background-color: #FFCC66;");
+      $(e).addClass("hot");
     } else if (perc <= 1) {
-      $(e).attr("style", "background-color: #CC0000;");
+      $(e).addClass("incomplete");
     }
 
     if (item.queue_id === "complete") {
-      $(e).attr("style", "background-color: #99FF99;");
+      $(e).addClass("complete");
     }
   });
 }

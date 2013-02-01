@@ -1,9 +1,11 @@
 .item-cont{
-  border: 1px solid #CCC;
-  height: 100px;
-  width: 265px;
+  border: solid 1px #C0C0C0;
+  height: 110px;
+  width: 260px;
   margin: 5px;
   padding: 5px;
+  font-size: small;
+  border-radius: 5px;
 }
 
 .item-cont .name-cont {
@@ -16,6 +18,30 @@
 }
 
 .item-cont .action-cont {
-  margin-top: 5px;
-  text-align: right;
+  margin-top: 20px;
+}
+
+.warm {
+  border-color: #FFFF00;
+}
+
+.hot {
+  border-color: #FF9933;
+}
+
+.incomplete {
+  border-color: #CC0000;
+}
+
+.complete {
+  border-color: #33CC33;
+}
+
+.item-cont img {
+  height: 20px;
+  cursor: pointer;
+}
+
+.item-cont .edit-item-button {
+  margin-right: 215px;
 }

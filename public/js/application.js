@@ -28,6 +28,7 @@ function itemMoveEvent(e, ui) {
 
 $(function(){
   $(".queue").sortable({
+    cursor: "move",
     connectWith: ".queue",
     receive: itemMoveEvent
   });

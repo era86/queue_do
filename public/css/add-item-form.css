@@ -1,7 +1,13 @@
 .add-item-form {
-  border: solid 1px #CCC;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-weight: bold;
+  font-size: small;
+  border: solid 1px #C0C0C0;
   background-color: #DDD;
   padding: 10px;
+  border-radius: 5px;
+  height: 500px;
+  width: 500px;
 }
 
 .ui-dialog .ui-dialog-titlebar {
@@ -33,4 +39,11 @@
   margin-top: 50px;
 }
 
+.button-cont button {
+  text-align: center;
+  width: 60px;
+}
 
+.add-item-form input, .add-item-form textarea, .add-item-form select {
+  border: solid 1px #CCC;
+}

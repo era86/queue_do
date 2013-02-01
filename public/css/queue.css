@@ -1,15 +1,23 @@
 .queue-holder {
-  margin: 5px 50px 5px 50px;
+  margin: 10px 30px 5px 30px;
   display: inline-block;
   padding: 5px;
+  text-align: left;
+}
+
+.queue-title {
+  font-size: large;
+  display: inline-block;
+  margin-bottom: 5px;
 }
 
 .queue-cont {
-  border: 1px solid #CCC;
-  height: 500px;
+  border: solid 1px #D8D8D8;
+  height: 475px;
   width: 300px;
   overflow-y: auto;
   overflow-x: hidden;
+  border-radius: 5px;
 }
 
 .queue {
